@@ -9,6 +9,7 @@ public class Poker {
         ArrayList<Card> deck = Card.generateDeck();
 
         System.out.println("\nRound 1:");
+        System.out.println("Dealing cards");
         for (Card[] player : players) {
             player[0] = deck.removeLast();
             player[1] = deck.removeLast();
@@ -52,8 +53,8 @@ public class Poker {
 }
 
 class Card {
-    Color color;
-    int kind;
+    private Color color;
+    private int kind;
 
     static ArrayList<Card> generateDeck() {
         ArrayList<Card> deck = new ArrayList<>(52);
